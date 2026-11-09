@@ -1,0 +1,68 @@
+/* The workspace loads the archived content stylesheet. Keep its nav rules out of the shared shell. */
+body > aside > nav[aria-label] {
+  display: grid;
+  gap: 4px;
+  margin: 48px 0 0;
+  padding: 0;
+}
+
+body > aside > nav[aria-label] > a {
+  display: block;
+  margin: 0;
+  padding: 11px 12px;
+  border: 0;
+  border-left: 1px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  font: 900 15px/1.5 ResearchSerif, Georgia, SimSun, serif;
+  transition: none;
+}
+
+body > aside > nav[aria-label] > a:hover,
+body > aside > nav[aria-label] > a[aria-current="page"] {
+  color: var(--gen);
+}
+
+body > aside > nav[aria-label] > a[aria-current="page"] {
+  border-color: var(--gen);
+}
+
+body > aside > nav[aria-label] small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font: 12px/1.5 Georgia, serif;
+}
+
+.shell > .site-header {
+  height: 57px;
+  padding-block: 0;
+  font: 12px/1.5 "Microsoft YaHei", sans-serif;
+}
+
+@media (max-width: 760px) {
+  body > aside > nav[aria-label] {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    margin: 16px -6px -5px;
+    padding: 0 6px 5px;
+  }
+
+  body > aside > nav[aria-label] > a {
+    flex: none;
+    padding: 8px 3px;
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  body > aside > nav[aria-label] small {
+    display: none;
+  }
+
+  .shell > .site-header {
+    height: 45px;
+  }
+}

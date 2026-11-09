@@ -1,7 +1,7 @@
 (()=>{
 'use strict';
 const KEY='conversation-v2-preview-theme';
-const DEFAULTS={names:['Gen','Si'],colors:['#277C74','#A33A46'],palette:{bg:'#F7F6F2',paper:'#FFFFFF',ink:'#202020',muted:'#747474',line:'#DEDCD6'},topicView:'cards',icon:null};
+const DEFAULTS={names:['Gen','Si'],colors:['#277C74','#A33A46'],palette:{bg:'#FFFFFF',paper:'#FFFFFF',ink:'#202020',muted:'#747474',line:'#DEDCD6'},topicView:'cards',icon:null};
 const isColor=v=>typeof v==='string'&&/^#[0-9a-f]{6}$/i.test(v);
 const isIcon=v=>typeof v==='string'&&v.length<=700000&&/^data:image\/png;base64,[a-z0-9+/=]+$/i.test(v);
 function normalize(value){const next=JSON.parse(JSON.stringify(DEFAULTS));if(!value||typeof value!=='object')return next;
