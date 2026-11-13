@@ -20,3 +20,17 @@ if (settings.icon) {
   icon.href = settings.icon;
   document.querySelector('.brand-symbol').src = settings.icon;
 }
+
+// Normalize only the workspace heading; preserve the archived content layout.
+function alignWorkspaceHeading() {
+  const heading = document.querySelector('#app > .page-heading');
+  if (!heading) return;
+  const title = heading.querySelector('h1');
+  const english = heading.querySelector('.eyebrow');
+  if (title && english) {
+    english.classList.replace('eyebrow', 'english');
+    title.after(english);
+  }
+}
+new MutationObserver(alignWorkspaceHeading).observe(document.getElementById('app'), {childList:true});
+alignWorkspaceHeading();

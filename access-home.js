@@ -1,0 +1,1 @@
+document.getElementById('lock-access').onclick=function(){try{localStorage.removeItem('gensi-private-d2bfea4c05118b734d38ba69');}catch{}this.textContent='已锁定，下次进入需输入密码';};

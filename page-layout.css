@@ -1,0 +1,19 @@
+/* V2.5 shared page rhythm. Loaded after legacy content styles. */
+:root{--page-gutter:42px;--page-top:40px;--page-heading-size:38px}
+.shell > .site-header{height:57px;padding:0 var(--page-gutter);background:var(--paper);font:12px/1.5 var(--sans);border-bottom:1px solid var(--line)}
+.shell > main,.shell > #app{max-width:1510px;margin:0 auto;padding:var(--page-top) var(--page-gutter) 36px;min-width:0}
+.shell > main > .title-row,.shell > #app > .page-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;min-height:150px;padding:0;margin:0 0 28px}
+.shell > main > .title-row h1,.shell > #app > .page-heading h1{font:900 var(--page-heading-size)/1.4 var(--serif);letter-spacing:-.025em;margin:0;color:var(--ink);text-wrap:balance}
+.shell > main .title-row .english,.shell > #app > .page-heading .english{font:16px/1.5 Georgia,serif;letter-spacing:0;text-transform:none;color:var(--muted);margin:12px 0 0}
+.shell > main .analysis-deck,.shell > #app > .page-heading .intro{font:13px/1.8 var(--sans);color:var(--muted);max-width:65ch;margin:14px 0 0}
+.shell > main > .dataset{margin:0 0 28px}
+.shell > .preview-note[hidden]{display:none!important}
+.shell > .page-footer{max-width:1426px;margin:0 var(--page-gutter);padding:20px 0 25px;font:11px/1.7 var(--sans);letter-spacing:0;color:var(--muted)}
+.shell > #app > .page-heading .edition{padding-top:4px}
+@media(max-width:1100px){:root{--page-gutter:26px;--page-top:30px;--page-heading-size:34px}}
+@media(max-width:760px){:root{--page-gutter:20px;--page-top:26px;--page-heading-size:28px}.shell > .site-header{height:45px}.shell > main > .title-row,.shell > #app > .page-heading{display:block;min-height:0;margin-bottom:24px}.shell > main .title-row .english,.shell > #app > .page-heading .english{font-size:14px;margin-top:10px}.shell > main .analysis-deck,.shell > #app > .page-heading .intro{font-size:12px;margin-top:12px}.shell > main > .dataset{margin:0 0 24px}.shell > #app > .page-heading .edition{display:none}}
+/* Let settings controls wrap within their panel instead of widening the page. */
+#app .toggle-field{white-space:normal;min-width:0;max-width:100%;flex-wrap:wrap}
+#app .settings-grid>*{min-width:0}
+#app .update-policy-row{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+@media(max-width:760px){#app .update-policy-row{grid-template-columns:1fr}}

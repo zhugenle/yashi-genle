@@ -1,0 +1,12 @@
+{
+  "version": "2.5",
+  "access": "encrypted-static",
+  "builtAt": "2026-11-13T12:33:24.941Z",
+  "publicPage": "index.html",
+  "protectedPages": [
+    "analysis.html",
+    "workspace.html#topics",
+    "workspace.html#search",
+    "workspace.html#settings"
+  ]
+}
